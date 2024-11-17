@@ -1,0 +1,258 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do Site */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #5e8d87;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Banner */
+section#home {
+    position: relative; /* Para posicionar o texto sobre a imagem */
+    height: 300px;
+    overflow: hidden;
+}
+
+section#home .banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+section#home .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section#home .banner .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+section#home .banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+section#home .banner p {
+    font-size: 1.2rem;
+}
+
+/* Produtos */
+section#produtos {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+section#produtos h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.produtos-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.produto {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.produto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #5e8d87;
+}
+
+.produto p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.produto button {
+    background-color: #5e8d87;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.produto button:hover {
+    background-color: #49756b;
+}
+
+/* Combo */
+section#combo {
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #5e8d87, #ff8c42);
+    color: white;
+    border-radius: 10px;
+    margin: 2rem;
+}
+
+section#combo h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+section#combo p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #f9f9f9;
+}
+
+section#combo button {
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+section#combo button:hover {
+    background-color: #e5c100;
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #ff8c42;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+
+/* Dispositivos Menores (Smartphones) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    section#home {
+        height: 200px;
+    }
+
+    section#home .banner h2 {
+        font-size: 1.8rem;
+    }
+
+    section#home .banner p {
+        font-size: 1rem;
+    }
+
+    .produtos-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .produto {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Tablets (Entre 769px e 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header nav ul {
+        gap: 1rem;
+    }
+
+    .produtos-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .produto {
+        width: 45%;
+    }
+}
