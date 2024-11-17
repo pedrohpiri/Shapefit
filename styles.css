@@ -185,23 +185,20 @@ section#combo button:hover {
     transform: scale(1.1);
 }
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
+/* Estilo do link no rodapé */
 footer a {
-    color: #ff8c42;
+    color: #ff8c42; /* Cor inicial do link */
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #ffd700; /* Cor ao passar o mouse */
+    text-decoration: underline; /* Sublinha o texto */
+    cursor: pointer; /* Mostra que é clicável */
 }
+
 
 /* Responsividade */
 
